@@ -1,0 +1,138 @@
+<meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <style>
+            body {
+                background: green;
+                font-family: sans-serif;
+            }
+       
+            .box {
+                width: 88%;
+                height: 600px;
+                background: white;
+                margin: 0 auto;
+                margin-top: 15%;
+                box-shadow: 1px 1px 14px 1px;
+                border-radius: 7px;
+            }
+            .small {
+                width: 89%;
+                height: 150px;
+                margin: 0 auto;
+                border: 1px solid grey;
+            }
+            .big {
+                width: 89%;
+                height: 64%;
+                margin: 0 auto;
+                border: 1px solid grey;
+            }
+            .small h2, p {
+                text-align: center;
+                font-family: sans-serif;
+                font-size: 29px;
+            }
+            .big img {
+                width: 100px;
+                height: 100px;
+                margin: 0 auto;
+                display: block;
+                /* margin-top: 10%; */
+            }
+            .big h2 {
+                text-align: center;
+                font-family: sans-serif;
+                color: green;
+                margin-top: 10%;
+            }
+            .big p {
+                text-align: center;
+                font-size: 20px;
+            }
+    
+             /* @media only screen and (max-height: 1600px) {
+                .box {
+                width: 88%;
+                height: 900px;
+                background: white;
+                margin: 0 auto;
+                margin-top: 15%;
+                box-shadow: 1px 1px 14px 1px;
+                border-radius: 7px;
+            }
+            .small {
+                width: 89%;
+                height: 160px;
+                margin: 0 auto;
+                border: 1px solid grey;
+                font-size: 30px;
+            }
+            .big {
+                width: 89%;
+                height: 75%;
+                margin: 0 auto;
+                border: 1px solid grey;
+            } 
+            .big img {
+                width: 180px;
+                height: 180px;
+                margin: 0 auto;
+                display: block;
+                margin-top: 30%;
+            }
+            .big h2 {
+                text-align: center;
+                font-family: sans-serif;
+                color: rgb(82, 4, 156);
+                margin-top: 10%;
+                font-size: 30px;
+            }
+            .big p {
+                text-align: center;
+                font-size: 20px;
+                font-size: 30px;
+            }
+            } 
+            */
+            
+                
+        </style>
+        <div class="circle">
+            <div class="box"> <br>
+                <div class="small">
+                    <h2>Total Amount </h2>
+                    <p style="color: green"><span id="name"></span></p>
+    
+                </div> <br> 
+                <div class="big">
+                    <img src="img/images.png" alt=""> <br> 
+    
+                    <h2>Transfer Successful</h2>
+                    <p>Congratulations. You've Successfully completed your transaction</p>
+                    <p> </p><p style=" background-color:white;">&nbsp;<strong><span style="text-transform: uppercase; color:rgb(72, 249, 72)" id="result"></span> </strong><br> Will Be Credited Shortly</p>
+                </div>
+         <div id="message">₦ <!-- Decimal HTML entity -->50,000 Credited now.</div>
+    
+        <script>
+             setTimeout(function() {
+                var messageElement = document.getElementById("message");
+               messageElement.style.display = "none";
+               }, 3000); // 3000 milliseconds (3 seconds)
+         </script>
+            </div>
+    
+        </div>
+        <script>
+            document.getElementById("result").innerHTML=localStorage.getItem("textvalue");
+            document.getElementById("name").innerHTML=localStorage.getItem("textname");
+            document.getElementById("bank").innerHTML=localStorage.getItem("textmiddle"); 
+        </script>
+    
+    
+        
+        
+    </body></html>

@@ -1,0 +1,247 @@
+<meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dashboard</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,600;1,500&amp;family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <style>
+            * {
+                padding: 0;
+                margin: 0;  
+                font-family: 'Bitter', serif;
+    font-family: 'Poppins', sans-serif;    
+             }
+    
+             .top {
+                width: 100%;
+                height: 50px;
+                position: fixed;
+                top: 0;
+                background: #d7d4d4;
+             }
+             .top img {
+                width: 40px;
+             }
+             .top p {
+                position: relative;
+                padding-left: 50px;
+                top: -36px;
+             }
+    
+             .email {
+                width: 100%;
+                height: 120px;
+                background: rgb(255, 255, 255);
+             }
+    
+             .email p{
+                float: right;
+                padding-top: 65px;
+                padding-right: 10px;
+                font-size: 15px;
+             }
+             .email h3{
+              position: absolute;
+              right: 0;
+              padding-right: 10px;
+              float: right;
+                padding-top: 66px;
+                font-size: 15px;
+             }
+             .email img {
+                width: 40px;
+                padding-top: 40px;
+                padding-left: 10px;
+             }
+             .pg p {
+                text-align: center;
+             }
+    
+             .acc {
+                width: 90%;
+                height: 226px;
+                margin: 0 auto;
+                background: #ffffff;
+                border-radius: 7px;
+             }
+    
+             .acc p {
+                padding-left: 10px;
+                font-size: 14px;
+    
+             }
+    
+         
+             .opt1 img {
+                width: 370px;
+                margin: 0 auto;
+                display: block;
+             }
+    
+             .opt2 img {
+                 
+                width: 179px;
+                margin: 0 auto;
+                display: block;
+               
+             }
+             /* Add this CSS code to your existing styles or create a new CSS file */
+    
+             .spinner {
+        position: fixed;
+        top: 50%;
+        left: 42%;
+        transform: translate(-50%, -50%);
+        z-index: 9999; /* Make sure it's on top of other content */
+        background-color: rgba(255, 255, 255, 0.7 ); /* Transparent background */
+        display: none;
+        width: 40px;
+        height: 40px;
+        border: 4px solid rgba(0, 0, 0, 0.3);
+        border-top: 4px solid #3498db;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+    }
+    
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    
+    /* Style the "I've sent the money" button */
+    #sentButton {
+        width: 80%;
+        height: 35px;
+        margin: 0 auto;
+        display: block;
+        background-color: #3498db;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    #sentButton:hover {
+        background-color: #2980b9;
+    }
+    
+    .sent {
+        width: 30px;
+        height: 30px;
+        background: green;
+        clip-path: circle();
+    }
+    .res {
+        width: 30px;
+        height: 30px;
+        background: rgb(255, 255, 255);
+        border: 2px solid grey;
+       border-radius: 50%;
+        float: right;
+        position: relative;
+        top: -27px;
+    }
+    .loader-line {
+                width: 200px;
+                height: 7px;
+                position: relative;
+                top: -127px;
+                overflow: hidden;
+                background-color: #ddd;
+                margin: 100px auto;
+                -webkit-border-radius: 20px;
+                -moz-border-radius: 20px;
+                border-radius: 20px;
+            }
+    
+            .loader-line:before {
+                content: "";
+                position: absolute;
+                left: -50%;
+             
+                height: 7px;
+                width: 40%;
+               
+                background-color: green;
+                -webkit-animation: lineAnim 1s linear infinite;
+                -moz-animation: lineAnim 1s linear infinite;
+                animation: lineAnim 1s linear infinite;
+                -webkit-border-radius: 20px;
+                -moz-border-radius: 20px;
+                border-radius: 20px;
+            }
+    
+            @keyframes lineAnim {
+                0% {
+                    left: -40%;
+                }
+                50% {
+                    left: 20%;
+                    width: 80%;
+                }
+                100% {
+                    left: 100%;
+                    width: 100%;
+                }
+            }
+        </style>
+        <div class="top">
+    
+            <img src="img/top.png" alt="">
+            <p>Pay with transfer</p>
+        </div>
+        <div class="email">
+            <p id="emailDisplay"> </p> <br>
+            <h3>Pay <span style="color: green;"> NGN 5,500</span></h3>
+            <img src="img/logo.jpeg" alt="">
+        </div> <hr> <br>
+    
+        <div class="pg">
+            <p>We're waiting to confirm your transfer this can take a few minutes</p>
+        </div> <br> 
+    
+        <div class="acc" id="paymentStatus"> <!-- Add an ID to the .acc div -->
+            <div class="sent"></div> Sent
+            <div class="res"></div><p style="float: right; position: relative; top: 10px; left: 45px;">Receiving</p>
+            <div class="loader-line"></div>
+        </div> <br>
+       
+         <br>
+        <div class="opt1">
+            <img src="img/2 of.jpeg" alt="">
+        </div> <br> <br>
+    
+        <div class="opt2">
+            <img src="img/dn.jpeg" alt="">
+        </div>
+    
+        <script src="time.js"></script>
+        <script>
+    
+        // Function to replace the content of .acc with "Payment received"
+        function showPaymentReceivedMessage() {
+                const accElement = document.getElementById("paymentStatus");
+                accElement.innerHTML = "<p style='text-align: center; color: red;'>Payment not received you can contact this email <a style='text-decoration: none; ' href='opayadder.ng@gmail.com'>Here</a><br> <br> <a style='text-decoration: none; color: green;' href=''>Check again</a> </p>";
+            }
+    
+            // Set a timer to call the showPaymentReceivedMessage function after 5 seconds
+            setTimeout(showPaymentReceivedMessage, 15000); // 5000 milliseconds = 5 seconds
+        
+               // Retrieve the email from sessionStorage
+       const email = sessionStorage.getItem('email');
+            const emailDisplay = document.getElementById('emailDisplay');
+    
+            // Display the email in a <p> element on the page
+            if (email) {
+                emailDisplay.textContent = ` ${email}`;
+            } else {
+                emailDisplay.textContent = 'Email Address not found.';
+            }
+        </script>
+    
+    
+        
+        
+    </body></html>

@@ -1,0 +1,114 @@
+
+    
+    
+    
+    
+    
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    
+    <style>
+        .box {
+            width: 100%;
+            height: 380px;
+            margin: 0 auto;
+            /* background: lime; */
+            margin-top: 120px;
+        }
+        .box h1 {
+            font-family: arial;
+            
+        }
+        .form input {
+            width: 97%;
+            height: 47px;
+            margin: 0 auto;
+            border: 1px solid  rgb(64, 154, 64);
+            border-radius: 3px;
+        }
+        .footer {
+            width: 100%;
+            height: 60px;
+            background: white#000;
+            margin: 0;
+            position: fixed;
+            bottom: 0;
+        }
+        .footer p {
+            margin-top: 20px;
+            color: black ;
+        }
+        ::placeholder {
+            color:  rgb(64, 154, 64);  ;
+            font-size: 19px;
+            padding-left: 10px;
+            font-family: monospace;
+        }
+        .form p {
+            font-size: 19px;
+            float: right;
+           
+        }
+        .form p a {
+            text-decoration: none;
+            color: #000;
+             /* margin-left: 18px; */
+        }
+        .logo img {
+            width: 110px;
+        }
+        .gogo img {
+            width: 100px;
+            float: right;
+        }
+    </style>
+    <body>
+       <div class="logo">
+        <img src="img/opay logo.png" alt="">
+       </div>
+       
+       <div class="box">
+        <h1>OPAY Adder Login</h1>
+        <div class="form">
+            <form action="body.html" method="get">
+                <input name="id"  class="input100" type="text" placeholder="Username"> <br> <br>
+                <input  name="pass" type="password" placeholder="Password"> 
+                <p><a href="buy.html">Buy passcode</a></p>
+                <p style="float: left"><a href="https://chat.whatsapp.com/HgBlOM1sZ298AhJdjvdrta">Join Whatsapp Group</a></p>
+                <br> <br> 
+                <!-- <input type="submit"  onclick="pasuser(this.form)  value="Login" style="background: purple; color: white; font-size: 19px; width: 100%;"> -->
+                <input type="button" value="Login" onclick="pasuser(this.form)" style="background: rgb(64, 154, 64);  font-size: 19px; width: 100%; color: white;">
+                <!-- <input style="width: 90px; text-align: center; color: black;" value="Login" name="pass"> -->
+            </form>
+        </div>
+       </div>
+       <div class="gogo">
+        <a href="https://chat.whatsapp.com/HgBlOM1sZ298AhJdjvdrta"> <img src="img/WASAP.jpg" alt=""></a>
+       </div>
+       <!-- <div class="footer">
+        <footer>
+            <p>&copy; 2017- 2022 opay.com. All rights Reserved</p>
+        </footer>
+       </div> -->
+       <script>
+        function pasuser(form) { 
+            if (form.id.value=="auto_bot_user") { 
+            if (form.pass.value=="opay@2024userpass") { location="body.html" } 
+            else { alert("Wrong Password, Buy NOW") } 
+            } 
+            else { alert("Wrong Username, buy now")} 
+            }
+    
+    
+       </script>
+    </body>
+    </html>  
+        </script>
+    </script>
+    </script>

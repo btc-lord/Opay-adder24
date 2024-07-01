@@ -1,0 +1,169 @@
+<meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    
+    <body>
+        
+        
+    
+        
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+        
+        <style>
+            * {
+                margin: 0;
+                box-sizing: border-box;
+            }
+    
+            body {
+                margin-top: 80px;
+                /* background-image: linear-gradient(to right, rgb(125, 125, 231), pink); */
+                background-color: green;
+            }
+    
+            .box {
+                width: 20%;
+                height: 300px;
+                margin: 0 auto;
+                background-color: green;
+                border-radius: 10px;
+                box-shadow: grey 7px 7px 7px 7px;
+            }
+    
+            @media only screen and (max-width: 700px) {
+                .box {
+                    width: 75%;
+                    height: 470px;
+                    margin: 0 auto;
+                    background-color: white;
+                    border-radius: 10px;
+                    box-shadow: grey 1px 1px 13px 1px;
+                }
+            
+            }
+    
+            .box input,
+            select {
+                width: 92%;
+                height: 40px;
+                margin: 0 auto;
+                margin-right: 0 auto;
+                margin-left: 0 auto;
+                display: block;
+                border-radius: 6px;
+                background-color: rgb(240, 240, 240);
+            }
+    
+            .box h3 {
+                text-align: center;
+            }
+    
+            .box button {
+                width: 62%;
+                height: 40px;
+                margin: 0 auto;
+                margin-right: 0 auto;
+                margin-left: 0 auto;
+                display: block;
+                border: none;
+                font-size: 17px;
+                border-radius: 8px;
+                background: green;
+            }
+    
+            .spin {
+                border-right: 3px solid rgb(0, 255, 47);
+                border-left: 3px solid rgb(12, 255, 41);
+                border-bottom: 3px solid rgb(0, 255, 21);
+                border-top: 3px solid rgb(26, 255, 0);
+                border-radius: 100%;
+                width: 50px;
+                height: 50px;
+                margin-left: 40%;
+            }
+    
+            @keyframes spin {
+                100% {
+                    transform: rotate(360deg);
+                    transition: linear;
+                }
+            }
+        </style>
+    
+        <div class="box">
+            <form action="congratzt.html"> <br>
+                <h3>Opay Adder</h3> <br> <br>
+                <input type="text" placeholder="Personal Tag(optional)">
+                <!-- <select id="bank">
+                    <option>...Wallet Name...</option> 
+                    <option value="">Trust Wallet</option> -->
+                <!-- <option value="">Fidelity Bank Plc</option>
+                    <option value="">FCMB</option>
+                    <option value="">Union Bank</option>
+                    <option value="">GTBank</option>
+                    <option value="">First Bank</option> -->
+    
+    
+                <!-- <option value="">Fidelity Bank Plc</option>
+                    <option value="">FCMB</option>
+                    <option value="">Union Bank</option>
+                    <option value="">GTBank</option>
+                    <option value="">First Bank</option>
+                    <option value="">UBA </option>
+                    <option value="">Zenith Bank</option>
+                    <option value="">Ecobank </option>
+                    <option value="">Heritage Bank</option>
+                    <option value="">Keystone Bank </option>
+                    <option value="">Polaris Bank </option>
+                    <option value="">Stanbic Bank</option>
+                    <option value="">Standard Chartered </option>
+                    <option value="">Sterling Bank </option>
+                    <option value="">Unity Bank </option>
+                    <option value="">Titan Trust Bank </option>
+                    <option value="">Wema Bank </option>
+                    <option value="">Jaiz Bank </option>
+                    <option value="">Kuda Bank</option>
+                    <option value="">Sparkle Bank</option>
+                    <option value="">Rubies Bank</option>
+                    <option value="">Rand Merchant Bank</option> -->
+                <option value=""></option>
+                 <br>
+                <input type="text" id="name" placeholder="Ammount To withdraw" value="₦50,000.00" disabled="" required=""> <br>
+                <input type="number" placeholder="Opay Account Number" required=""> <br>
+                <input type="textx " id="txt" placeholder=" Opay Account Name" required="">
+                <br> <br>
+                <button onclick="passvalue();">WITHDRAWAL</button>
+            </form> <br>
+    
+    
+            
+            <script>
+                function passvalue() {
+                    var firstname = document.getElementById("txt").value;
+                    localStorage.setItem("textvalue", firstname);
+    
+                    var lastname = document.getElementById("name").value;
+                    localStorage.setItem("textname", lastname);
+    
+                    var middlename = document.getElementById("bank").value;
+                    localStorage.setItem("textmiddle", middlname);
+    
+    
+                }
+            </script>
+    
+    
+    
+    
+    
+    
+        
+            
+    </div></body></html>
